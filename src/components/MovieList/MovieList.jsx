@@ -4,6 +4,7 @@ import { List, Spin, Pagination, Alert } from 'antd'
 import MovieCards from '../MovieCards/MovieCards'
 import { fetchMovies, getRatedMovies } from '../../api/moviesApi'
 import { GenresContext } from '../App/App'
+import './MovieList.css'
 
 const MovieList = ({
   searchQuery,

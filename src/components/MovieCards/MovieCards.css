@@ -86,8 +86,8 @@
 .movie-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
+  align-items: flex-start; /* Изменим на flex-start вместо center */
+  margin-bottom: 5px; /* Уменьшим отступ снизу */
 }
 
 .movie-title {
@@ -136,77 +136,36 @@
   color: #ffd700;
 }
 
-@media (max-width: 600px) {
-  .app-container {
-    max-width: 420px;
-    padding: 10px;
-  }
-
-  .movie-list-container {
-    max-width: 420px;
-    min-width: 420px;
-  }
-
-  .movie-grid {
-    min-width: 420px;
-    justify-content: center;
-  }
-
-  .movie-grid.ant-list .ant-list-item {
-    width: 420px;
-    height: 260px;
-  }
-
-  .movie-card {
-    width: 420px;
-    height: 260px;
-  }
-
+@media (max-width: 420px) {
   .movie-card-content {
-    flex-direction: column;
+    padding: 8px;
   }
+
+  
 
   .movie-poster {
-    flex: 0 0 420px;
-    height: 250px;
-  }
-
-  .movie-poster-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
+    flex: 0 0 100px;
+    height: 150px;
   }
 
   .movie-content {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .movie-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .movie-rating-circle {
-    margin-top: 8px;
+    padding-left: 10px;
   }
 
   .movie-title {
     font-size: 16px;
+    margin-right: 8px;
+  }
+
+  .movie-rating-circle {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
   }
 
   .movie-release,
+  .movie-description,
   .movie-genres {
-    font-size: 14px;
-  }
-
-  .movie-description {
-    font-size: 14px;
-    height: auto;
-  }
-
-  .movie-rate {
-    font-size: 14px;
+    font-size: 12px;
   }
 }

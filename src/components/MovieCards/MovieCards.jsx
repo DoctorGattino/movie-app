@@ -68,7 +68,7 @@ const MovieCards = ({ movie, genres, onRateChange, userRating }) => {
             {formatReleaseDate(movie.release_date)}
           </p>
           <p className="movie-description">
-            {truncateText(movie.overview, 200)}
+            {truncateText(movie.overview, 150)}
           </p>
           <p className="movie-genres">
             <strong>Genres:</strong> {getGenreNames(movie.genre_ids)}

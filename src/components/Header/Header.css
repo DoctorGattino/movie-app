@@ -10,3 +10,23 @@
 .ant-tabs-tabpane {
   padding: 10px 0; /* Добавим отступы для SearchBar */
 }
+
+@media (max-width: 420px) {
+  .ant-tabs {
+    width: 100% !important; /* Вкладки занимают всю ширину */
+  }
+
+  .ant-tabs-nav {
+    margin-bottom: 10px !important; /* Уменьшаем отступ под вкладками */
+  }
+
+  .ant-tabs-tab {
+    padding: 8px 16px !important; /* Уменьшаем размер вкладок */
+    font-size: 14px !important; /* Уменьшаем шрифт */
+  }
+
+  .ant-input-search {
+    width: 100% !important; /* Поисковая строка на всю ширину */
+    max-width: none !important; /* Убираем ограничение по ширине */
+  }
+}

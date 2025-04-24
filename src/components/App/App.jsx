@@ -5,6 +5,7 @@ import { ConfigProvider } from 'antd'
 import MovieList from '../MovieList/MovieList'
 import Header from '../Header/Header'
 import { createGuestSession, fetchGenres, rateMovie } from '../../api/moviesApi'
+import './App.css'
 
 export const GenresContext = createContext()
 

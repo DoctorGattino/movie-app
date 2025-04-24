@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+  .movie-item {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .movie-list-container {
+    max-width: 100%; /* Убираем ограничение по ширине */
+  }
+
+  .movie-grid {
+    justify-content: center; /* Центрируем карточки */
+  }
+
+  .movie-item {
+    flex: 0 0 calc(100% - 10px); /* Возвращаем адаптивную ширину */
+    width: calc(100% - 10px); /* Ширина с отступами по 5px с каждой стороны */
+    margin: 0 5px 8px -25px !important; /* Восстанавливаем отступы */
+  }
+}
+
