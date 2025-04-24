@@ -67,7 +67,7 @@ export default [
 
       // 🔹 Чистота кода
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
-      'no-console': 'warn',
+      'no-console': 'off',
       'no-debugger': 'warn',
     },
     settings: {

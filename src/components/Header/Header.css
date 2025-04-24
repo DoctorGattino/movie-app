@@ -1,0 +1,12 @@
+.ant-tabs-nav-list {
+  margin: 0 auto;
+}
+
+.ant-tabs-content {
+  width: 100%;
+  display: block !important; /* Убедимся, что содержимое вкладки видно */
+}
+
+.ant-tabs-tabpane {
+  padding: 10px 0; /* Добавим отступы для SearchBar */
+}
