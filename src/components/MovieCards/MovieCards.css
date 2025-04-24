@@ -136,36 +136,83 @@
   color: #ffd700;
 }
 
-@media (max-width: 420px) {
-  .movie-card-content {
-    padding: 8px;
+@media (max-width: 600px) {
+  .app-container {
+    max-width: 420px;
+    padding: 10px;
   }
 
-  
+  .movie-list-container {
+    max-width: 420px;
+    min-width: unset; /* Убираем min-width для адаптивности */
+  }
+
+  .movie-grid {
+    min-width: unset;
+    justify-content: center;
+  }
+
+  .movie-grid.ant-list .ant-list-item {
+    width: 420px; /* Фиксированная ширина для экранов от 420px до 600px */
+    height: auto; /* Высота адаптируется */
+  }
+
+  .movie-card {
+    width: calc(100% - 10px); /* Карточка занимает всю ширину .ant-list-item */
+    height: auto;
+  }
+
+  .movie-card-content {
+    flex-direction: row; /* Сохраняем горизонтальную компоновку */
+    padding: 10px;
+  }
 
   .movie-poster {
-    flex: 0 0 100px;
-    height: 150px;
+    flex: 0 0 130px; /* Уменьшаем ширину постера, как во втором скриншоте */
+    height: 195px;
+  }
+
+  .movie-poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px; /* Убираем специфичные border-radius */
   }
 
   .movie-content {
-    padding-left: 10px;
+    flex: 1; /* Текст занимает оставшееся пространство */
+    padding-left: 15px;
+  }
+
+  .movie-header {
+    display: flex;
+    justify-content: space-between; /* Возвращаем горизонтальное расположение */
+    align-items: flex-start;
+    margin-bottom: 5px;
+  }
+
+  .movie-rating-circle {
+    margin-top: 0; /* Убираем отступ сверху */
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
   }
 
   .movie-title {
     font-size: 16px;
-    margin-right: 8px;
-  }
-
-  .movie-rating-circle {
-    width: 25px;
-    height: 25px;
-    font-size: 12px;
+    margin-right: 10px;
   }
 
   .movie-release,
-  .movie-description,
   .movie-genres {
-    font-size: 12px;
+    font-size: 14px;
   }
-}
+
+  .movie-description {
+    font-size: 14px;
+    height: auto;
+  }
+
+  .movie-rate {
+    font-size: 14px;
+  }
